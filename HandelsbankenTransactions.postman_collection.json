@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "415e6e0e-63d8-486b-838c-bde646bc27ff",
+		"name": "HandelsbankenTransactions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "GetAccounts",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "state",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "192.102.28.2",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Request-ID",
+								"value": "c8271b81-4229-5a1f-bf9c-758f11c1f5b1",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Transaction-ID",
+								"value": "6b24ce42-237f-4303-a917-cf778e5013d6",
+								"type": "text"
+							},
+							{
+								"key": "X-IBM-Client-Id",
+								"value": "62dec6b3-1814-4ca2-864a-c33b91ef6007",
+								"type": "text"
+							},
+							{
+								"key": "Country",
+								"value": "SE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.handelsbanken.com/openbanking/psd2/v2/accounts",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"handelsbanken",
+								"com"
+							],
+							"path": [
+								"openbanking",
+								"psd2",
+								"v2",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccount",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "headerPrefix",
+									"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "state",
+									"value": "psd2_accounts",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "qTXlK6GTxzzmuNzffKih",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "W04Es7WAvxnk5MlZ51k1",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "192.102.28.2",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Request-ID",
+								"value": "c8271b81-4229-5a1f-bf9c-758f11c1f5b1",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Transaction-ID",
+								"value": "6b24ce42-237f-4303-a917-cf778e5013d6",
+								"type": "text"
+							},
+							{
+								"key": "X-IBM-Client-Id",
+								"value": "62dec6b3-1814-4ca2-864a-c33b91ef6007",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.handelsbanken.com/openbanking/psd2/v2/accounts/{{account_id}}",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"handelsbanken",
+								"com"
+							],
+							"path": [
+								"openbanking",
+								"psd2",
+								"v2",
+								"accounts",
+								"{{account_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccountTransactions",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "state",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "192.102.28.2",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Request-ID",
+								"value": "c8271b81-4229-5a1f-bf9c-758f11c1f5b1",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Transaction-ID",
+								"value": "6b24ce42-237f-4303-a917-cf778e5013d6",
+								"type": "text"
+							},
+							{
+								"key": "X-IBM-Client-Id",
+								"value": "62dec6b3-1814-4ca2-864a-c33b91ef6007",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.handelsbanken.com/openbanking/psd2/v2/accounts/{{account_id}}/transactions",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"handelsbanken",
+								"com"
+							],
+							"path": [
+								"openbanking",
+								"psd2",
+								"v2",
+								"accounts",
+								"{{account_id}}",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CardAccounts",
+			"item": [
+				{
+					"name": "GetAccounts Copy",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "clientId",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "state",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "body",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI1",
+								"type": "text"
+							},
+							{
+								"key": "PSU-IP-Address",
+								"value": "192.102.28.2",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Request-ID",
+								"value": "c8271b81-4229-5a1f-bf9c-758f11c1f5b1",
+								"type": "text"
+							},
+							{
+								"key": "TPP-Transaction-ID",
+								"value": "6b24ce42-237f-4303-a917-cf778e5013d6",
+								"type": "text"
+							},
+							{
+								"key": "X-IBM-Client-Id",
+								"value": "62dec6b3-1814-4ca2-864a-c33b91ef6007",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://sandbox.handelsbanken.com/openbanking/psd2/v1/card-accounts",
+							"protocol": "https",
+							"host": [
+								"sandbox",
+								"handelsbanken",
+								"com"
+							],
+							"path": [
+								"openbanking",
+								"psd2",
+								"v1",
+								"card-accounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "accessToken",
+				"value": "QVQ6YmNlZjI0M2QtZDBhZi00OGZiLWE0OTgtZGUwMTJhMDdjMjYz",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "AIS",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{client_id}}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://sandbox.handelsbanken.com/openbanking/oauth2/token/1.0",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "state",
+				"value": "psd2_accounts",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "body",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "7f7e74e2-f757-4716-949c-83ef7f938659"
+		},
+		{
+			"key": "account_id",
+			"value": "ae57e780-6cf3-11e9-9c41-e957ce7d7d69"
+		}
+	]
+}
