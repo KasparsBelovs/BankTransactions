@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e4670e15-de9e-4c4c-8fab-f739a07c3613</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>HandelsBanken\GetAccount.py</StartupFile>
+    <StartupFile>Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,28 +21,31 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HandelsBanken\GetAccount.py">
+    <Compile Include="HandelsBanken\GetHandelsbankenAccount.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HandelsBanken\GetAccounts.py">
+    <Compile Include="HandelsBanken\GetHandelsbankenAccounts.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HandelsBanken\GetAccountTransactions.py">
+    <Compile Include="HandelsBanken\GetHandelsbankenAccountTransactions.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SebBank\GetAccounts.py">
+    <Compile Include="Main.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SebBank\GetAccount.py">
+    <Compile Include="SebBank\GetSebBankAccounts.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SebBank\GetAccountBalance.py">
+    <Compile Include="SebBank\GetSebBankAccount.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SebBank\GetAccountTransactions.py">
+    <Compile Include="SebBank\GetSebBankAccountBalance.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="SebBank\GetAccountSpecificTransaction.py">
+    <Compile Include="SebBank\GetSebBankAccountTransactions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SebBank\GeSebBankAccountSpecificTransaction.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
