@@ -459,19 +459,19 @@
 					},
 					{
 						"key": "PSU-IP-Address",
-						"value": "192.102.28.2",
+						"value": "95.68.109.100",
 						"description": "public sector unit",
 						"type": "text"
 					},
 					{
 						"key": "TPP-Transaction-ID",
-						"value": "6b24ce42-237f-4303-a917-cf778e5013d6",
+						"value": "{{$guid}}",
 						"description": "third party provider",
 						"type": "text"
 					},
 					{
 						"key": "TPP-Request-ID",
-						"value": "c8271b81-4229-5a1f-bf9c-758f11c1f5b1",
+						"value": "{{$guid}}",
 						"type": "text"
 					},
 					{
@@ -515,14 +515,13 @@
 					}
 				],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "access",
-							"value": "ALL_ACCOUNTS",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\r\n    \"access\":\"ALL_ACCOUNTS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
 					"raw": "https://sandbox.handelsbanken.com/openbanking/psd2/v1/consents",
@@ -544,19 +543,134 @@
 		},
 		{
 			"name": "RequestACGToken",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true,
+					"content-type": true
+				}
+			},
 			"request": {
 				"method": "POST",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/ecmascript",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "AIS:a12c0b59-a431-4994-8931-fbdb16a44720",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{client_id}}",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://example.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sandbox.handelsbanken.com/openbanking/redirect/oauth2/token/1.0",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"handelsbanken",
+						"com"
+					],
+					"path": [
+						"openbanking",
+						"redirect",
+						"oauth2",
+						"token",
+						"1.0"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "RedirectMockEndpoint",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://sandbox.handelsbanken.com/openbanking/redirect/redirect-authorization-client-mock/1.0?scope=AIS:a12c0b59-a431-4994-8931-fbdb16a44720&state={{$guid}}&redirect_uri=https://sandbox.handelsbanken.com/openbanking/redirect/oauth2/authorize/1.0&error",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"handelsbanken",
+						"com"
+					],
+					"path": [
+						"openbanking",
+						"redirect",
+						"redirect-authorization-client-mock",
+						"1.0"
+					],
+					"query": [
+						{
+							"key": "scope",
+							"value": "AIS:a12c0b59-a431-4994-8931-fbdb16a44720"
+						},
+						{
+							"key": "state",
+							"value": "{{$guid}}"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://sandbox.handelsbanken.com/openbanking/redirect/oauth2/authorize/1.0"
+						},
+						{
+							"key": "error",
+							"value": null
+						}
+					]
+				}
 			},
 			"response": []
 		}
