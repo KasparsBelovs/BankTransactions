@@ -14,25 +14,6 @@ sebBankToken = '7kuGZUjOrZwUQ8zM6Fqk'
 sebBankAccountId = '5a59028c-e757-4f22-b88c-3ba90573383c'
 sebBankTransactionId = '6f24de7e-9f81-4f09-999a-b33bead16e8d'
 
-#handelsbankenAccounts = GetHandelsbankenAccounts()
-#handelsbankenAccount = GetHandelsbankenAccount(handelsbankenAccountId)
-#handelsbankenAccountTransactions = GetHandelsbankenAccountTransactions(handelsbankenAccountId)
-
-#sebBankAccounts = GetSebBankAccounts(sebBankToken)
-#sebBankAccount = GetSebBankAccount(sebBankToken, sebBankAccountId)
-#sebBankAccountBalance = GetSebBankAccountBalance(token = sebBankToken, account=sebBankAccountId)
-#sebBankAccountTransactions = GetSebBankAccountTransactions(sebBankToken, sebBankAccountId)
-#sebBankAccountSpecificTransaction = GeSebBankAccountSpecificTransaction(sebBankToken, sebBankAccountId, sebBankTransactionId)
-
-#handelsbankenAccounts.run()
-#handelsbankenAccount.run()
-#handelsbankenAccountTransactions.run()
-
-#sebBankAccounts.run()
-#sebBankAccount.run()
-#sebBankAccountBalance.run()
-#sebBankAccountTransactions.run()
-#sebBankAccountSpecificTransaction.run()
 handelsbankenActionChoise = None
 sebActionChoise = None
 
